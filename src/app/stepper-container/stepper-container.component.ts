@@ -1,15 +1,13 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-stepper-container',
+  templateUrl: './stepper-container.component.html',
+  styleUrls: ['./stepper-container.component.scss']
 })
-export class AppComponent {
-
+export class StepperContainerComponent {
   index: number;
-  title = 'cdk-playground';
 
   data = [
     {
@@ -34,18 +32,17 @@ export class AppComponent {
     const newStep = {
       title: 'New Step',
       description: 'This is a new step'
-    }
+    };
     this.data.push(newStep);
   }
   selectedStep(index: number) {
-    console.log('selected step index' , index);
     this.index = index;
   }
-  deleteStep(index: number) {
-    console.log('delete index');
+  deleteStep() {
     this.data.splice(this.index, 1);
   }
   drop(output: any) {
     moveItemInArray(this.data, output.previous, output.current);
   }
+
 }

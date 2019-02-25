@@ -1,0 +1,8 @@
+<app-custom-stepper (stepClicked)="selectedStep($event)" (dropEvent)="drop($event)" >
+  <cdk-step *ngFor="let item of data; let i = index" label="{{data[i].title}}">
+    <app-step-component [step]="item"></app-step-component>
+  </cdk-step>
+</app-custom-stepper>
+
+<button (click)="addStep()">Add Step</button>
+<button (click)="deleteStep()">Delete Selected Step</button>

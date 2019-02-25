@@ -1,0 +1,22 @@
+.step-container {
+  display: inline-flex;
+}
+ 
+.line {
+  margin: auto;
+}
+.step {
+  border: 1px solid black;  
+  width: 100px;
+  height: 100px;
+}
+.move-icon {
+  cursor: move;
+  width: 18px;
+  height: 18px;
+  margin-bottom: 20px;
+}
+
+span{
+  margin-left: 10px;
+}
