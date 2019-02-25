@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./step-component.component.scss']
 })
 export class StepComponentComponent implements OnInit {
-  @Input() step: string;
+  @Input() step: any;
   constructor() { }
 
   ngOnInit() {

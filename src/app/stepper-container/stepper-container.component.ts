@@ -43,6 +43,7 @@ export class StepperContainerComponent {
   }
   drop(output: any) {
     moveItemInArray(this.data, output.previous, output.current);
+    this.index = output.current;
   }
 
 }
